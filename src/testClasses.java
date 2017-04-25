@@ -10,7 +10,7 @@ public class testClasses {
 
         Bicycle a = new Bicycle();
         Bicycle aa = new Bicycle(2,3);
-        Bicycle aa = new Bicycle(1,2,3);
+        Bicycle aaa = new Bicycle(1,2,3);
     }
 }
 
@@ -47,6 +47,9 @@ class Bicycle{
         return speed;
     }
 }
+
+//https://docs.oracle.com/javase/tutorial/java/javaOO/arguments.html
+//https://www.youtube.com/watch?v=btFfXgUdIzY&list=RDmQR0bXO_yI8&index=3
 
 class MountainBike extends Bicycle{
     private int seatHeight;
