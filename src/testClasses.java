@@ -8,6 +8,9 @@ public class testClasses {
 
         tmp1.setSpeed(3,4);
 
+        Bicycle a = new Bicycle();
+        Bicycle aa = new Bicycle(2,3);
+        Bicycle aa = new Bicycle(1,2,3);
     }
 }
 
@@ -18,6 +21,14 @@ class Bicycle{
     public Bicycle(int startGear, int startSpeed){
         gear = startGear;
         speed = startSpeed;
+    }
+    public Bicycle(){
+        gear = 3;
+        speed = 23;
+    }
+    public Bicycle(int a, int b, int c){
+        gear = a+2;
+        speed = a*c+b;
     }
 
     public void setGear(int newValue){
@@ -44,6 +55,7 @@ class MountainBike extends Bicycle{
         super(startGear, startSpeed);
         seatHeight = startHeight;
     }
+
 
         public void setHeight(int newValue){
             seatHeight = newValue;
