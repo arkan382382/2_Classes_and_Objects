@@ -11,6 +11,54 @@ public class testClasses {
         Bicycle a = new Bicycle();
         Bicycle aa = new Bicycle(2,3);
         Bicycle aaa = new Bicycle(1,2,3);
+
+        System.out.print("a");
+
+
+
+        int x = 3;
+        System.out.println("Before change by value:" + x);
+        passMethod(x);
+        System.out.println("Aftef change by value:" + x);             // 3
+
+        Transform tmp11 = new Transform(10);
+        System.out.println("Before class change" + tmp11.getData());
+        passMethod(tmp11);
+        System.out.println("After class change" + tmp11.getData());   // 222
+    }
+    public static void passMethod (int p) {
+        p = 10;
+    }
+    public static void passMethod(Transform tmp){
+        tmp.setData(2222);
+       // tmp = new Transform();
+    }
+}
+/**         Check it!
+ *  public void moveCircle(Circle circle, int deltaX, int deltaY) {
+ // code to move origin of circle to x+deltaX, y+deltaY
+    circle.setX(circle.getX() + deltaX);
+    circle.setY(circle.getY() + deltaY);
+
+ // code to assign a new reference to circle
+    circle = new Circle(0, 0);
+    }
+ Let the method be invoked with these arguments:
+
+ moveCircle(myCircle, 23, 56)*/
+class Transform{
+    private int data;
+
+    Transform(int p){
+        data = p;
+    }
+    Transform(){
+    }
+    public void setData(int newValue){
+        data = newValue;
+    }
+    public int getData(){
+        return data;
     }
 }
 
